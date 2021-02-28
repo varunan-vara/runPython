@@ -1,4 +1,3 @@
-document.write(`<script src="script.js" type="text/javascript" />`)
 //Getting Values from IDE input
 var inputval = document.getElementById("IDE").value
 

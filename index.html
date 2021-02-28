@@ -9,11 +9,15 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet"> 
+        <script src="http://pypyjs.org/pypyjs-release/lib/Promise.min.js"></script>
+        <script src="http://pypyjs.org/pypyjs-release/lib/FunctionPromise.js"></script>
+        <script src="http://pypyjs.org/pypyjs-release/lib/pypyjs.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="bodyclass">
             <div id="inputbox" class="boxy">
-                <textarea id="IDE" name="ide"># This is some Python Code</textarea>
+                <textarea id="IDE" name="ide" disabled># This is some Python Code</textarea>
             </div>
             <div id="terminalbox" class="boxy">
                 <p id="TERMINAL" name="terminal"></p>
@@ -24,8 +28,9 @@
             <h5 class="MadyBy">Python Interpreter</h5>
             <br>    
             <h6 class="h6button"><a class="h6button-a" href="https://github.com/varunan-vara/runPython">Source Code</a></h6>
-            <h6 class="h6button">pypy.js version 0.4.0</h6>
+            <h6 class="h6button" id="infoplacer">pypy.js has not loaded</h6>
         </div>
         <script src="js/funcy.js"></script>
+        <script src="js/runPython.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>
