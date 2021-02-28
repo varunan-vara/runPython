@@ -4,6 +4,7 @@ pypyjs.ready().then( function () {
     console.log("Pypy.js ready for use.");
     setTimeout(function() {
         document.getElementById("infoplacer").style.color = "#F8F9FA";
+        document.getElementById("infoplacer").innerHTML = "Pypyjs is loaded, and ready for use.";
         document.getElementById("IDE").disabled = false;
         function addToString (stringy) {
             stringplacer += stringy
