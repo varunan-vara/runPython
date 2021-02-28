@@ -13,7 +13,7 @@ Imports from fonts.google.com
     --ide-mainscript: #F8F9FA;
     --ide-specialscript-1: #9ADCE4;
     --ide-specialscript-2: #ED6A5A;
-    --ide-specialscript-2: #F4F1BB;
+    --ide-specialscript-3: #F4F1BB;
     --transition-speed: 400ms;
 }
 
@@ -107,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #terminalbox {
     background-color: var(--terminal-background);
+    width: 40vw;
     position: absolute;
     right: 0;
     position: absolute;
@@ -163,4 +164,14 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 2vw;
     padding-left: 2vw;
     font-size: 14px;
+}
+
+#infoplacer {
+    color: var(--ide-specialscript-2);
+}
+
+.outputText {
+    margin: 1vw;
+    margin-top: 2vh;
+    font-family: 'Inconsolata', monospace;
 }

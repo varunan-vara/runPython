@@ -1,14 +1,3 @@
-//Getting Values from IDE input
-var inputval = document.getElementById("IDE").value
-
-//run Function
-function runButtonClick() {
-    console.log(inputval.replace(/\n/g,'\\n').replace(/\t/,'\\t'));
-}
-
-//IDE Annotations
-var inputvalfull = document.getElementById("IDE")
-
 var annotate1 = [
     "print",
     "def",
@@ -39,5 +28,3 @@ function annotate() {
 }
 */
 
-
-pypyjs.exec
