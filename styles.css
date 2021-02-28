@@ -22,6 +22,7 @@ body {
     padding: 0;
     background-color: black;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 div {
@@ -37,7 +38,7 @@ div {
 }
 
 .boxy {
-    min-height: 30vh;
+    min-height: 90vh;
     min-width: 50vw;
     display: inline-block;
 }
@@ -81,23 +82,72 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 40px;
     padding-right: 40px;  
     position: absolute;
-    right: 2%;
+    right: -40%;
     bottom: 15%;  
     border-radius: 20px;
+    -webkit-animation: slideleft2 0.6s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slideleft2 0.6s forwards;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes slideleft2 {
+    100% { right: 2%; }
+}
+
+@keyframes slideleft2 {
+    100% { right: 2%; }
 }
 
 #inputbox {
     background-color: var(--ide-background);
+    position: absolute;
+    left: 0vw;
 }
 
 #terminalbox {
     background-color: var(--terminal-background);
+    position: absolute;
+    right: 0;
+    position: absolute;
+    right: 0vw;
+}
+
+@-webkit-keyframes slideright {
+    100% {left: 50vw;}
+}
+
+@-webkit-keyframes slideleft {
+    100% {right: 50vw;}
+}
+
+@keyframes slideright {
+    100% {left: 50vw;}
+}
+
+@keyframes slideleft {
+    100% {right: 50vw;}
 }
 
 .footer {
     height: 2vh;
     display: flex;
     flex-direction: horizontal;
+    position: absolute;
+    left: 1vw;
+    bottom: -10%;
+    -webkit-animation: slidedown 0.6s forwards;
+    -webkit-animation-delay: 0.2s;
+    animation: slidedown 0.6s forwards;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes slidedown {
+    100% {bottom: 10%}
+}
+
+@keyframes slidedown {
+    100% {bottom: 10%}
 }
 
 .MadyBy {
