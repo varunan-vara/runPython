@@ -1,4 +1,5 @@
 /*
+Imports from fonts.google.com
     font-family: 'Inconsolata', monospace;
 
     font-family: 'Noto Sans JP', sans-serif;
@@ -7,5 +8,109 @@
 :root {
     font-size: 12px;
     font-family: 'Inconsolata', monospace;
-    
+    --ide-background: #202220;
+    --terminal-background: #161616;
+    --ide-mainscript: #F8F9FA;
+    --ide-specialscript-1: #9ADCE4;
+    --ide-specialscript-2: #ED6A5A;
+    --ide-specialscript-2: #F4F1BB;
+    --transition-speed: 400ms;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.bodyclass {
+    display: inline-block;
+    direction: horizontal;
+    display: flex;
+    justify-content: center;
+}
+
+.boxy {
+    min-height: 30vh;
+    min-width: 50vw;
+    display: inline-block;
+}
+
+textarea {
+    padding: 2vw;
+    width: 30vw;
+    height: 80vh;
+    background-color: var(--ide-background);
+    color: var(--ide-mainscript);
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    font-family: "Inconsolata", monospace;
+}
+
+textarea:focus, input:focus, select:focus {
+    outline: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: var(--ide-mainscript);
+}
+
+a {
+    color: var(--ide-mainscript);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ide-mainscript);
+}
+
+.runButton {
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;  
+    position: absolute;
+    right: 2%;
+    bottom: 15%;  
+    border-radius: 20px;
+}
+
+#inputbox {
+    background-color: var(--ide-background);
+}
+
+#terminalbox {
+    background-color: var(--terminal-background);
+}
+
+.footer {
+    height: 2vh;
+    display: flex;
+    flex-direction: horizontal;
+}
+
+.MadyBy {
+    justify-content: center;
+    text-align: center;
+    color: var(--ide-mainscript);
+    font-size: 20px;
+    padding-right: 5vw;
+}
+
+.h6button {
+    padding-top: 1vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    font-size: 14px;
 }
