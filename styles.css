@@ -57,6 +57,7 @@ textarea {
     box-shadow: none;
     resize: none;
     font-family: "Inconsolata", monospace;
+    line-height: 140%;
 }
 
 textarea:focus, input:focus, select:focus {
@@ -174,4 +175,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1vw;
     margin-top: 2vh;
     font-family: 'Inconsolata', monospace;
+    color: var(--ide-mainscript);
+}
+
+.errText {
+    margin: 1vw;
+    margin-top: 2vh;
+    font-family: 'Inconsolata', monospace;
+    color: var(--ide-specialscript-2);
 }
