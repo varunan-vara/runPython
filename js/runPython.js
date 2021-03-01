@@ -67,6 +67,7 @@ pypyjs.ready().then( function () {
             terminalOutput(result);
          })
          document.getElementById("runButton").style.cursor = "pointer";
+         document.getElementById("runButton").innerHTML = "Run Code";
          outputLine("Interpreter Ready to print")
     }, 1000)
 });
