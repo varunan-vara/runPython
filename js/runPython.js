@@ -1,6 +1,44 @@
 //Variables
 document.getElementById("IDE").spellcheck = "false";
 document.getElementById("runButton").style.cursor = "not-allowed";
+
+//Define some variables
+var outputwrap = document.getElementById("terminalbox");
+function outputLine (data) {
+    var outputy = document.createElement("p");
+    outputy.className = "outputText";
+    outputy.innerHTML = String(data);
+
+    //Add new line to terminal
+    outputwrap.appendChild(outputy);
+    var br = document.createElement("br");
+    outputwrap.appendChild(br);
+}
+
+function outputErr (data) {
+    document.getElementById("runButton").innerHTML = "Error";
+    var outputy = document.createElement("p");
+    outputy.className = "errText";
+    outputy.innerHTML = String(data);
+
+    //Add new line to terminal
+    outputwrap.appendChild(outputy);
+    setTimeout(function(){document.getElementById("runButton").innerHTML = "Run Code"}, 2000)
+}
+
+//Sort out errors:
+if (typeof console != "undefined") {
+    if (typeof console.error != "undefined") {
+        console.alterror = console.error;
+    } else {
+        console.alterror = function () {}
+    }
+}
+console.error = function (message) {
+    console.alterror(message);
+    outputErr(message);
+}
+
 pypyjs.ready().then( function () {
     console.log("Pypy.js ready for use.");
     setTimeout(function() {
@@ -29,47 +67,9 @@ pypyjs.ready().then( function () {
             terminalOutput(result);
          })
          document.getElementById("runButton").style.cursor = "pointer";
+         outputLine("Interpreter Ready to print")
     }, 1000)
 });
-
-//Define some variables
-var outputwrap = document.getElementById("terminalbox");
-function outputLine (data) {
-    var outputy = document.createElement("p");
-    outputy.className = "outputText";
-    outputy.innerHTML = String(data);
-
-    //Add new line to terminal
-    outputwrap.appendChild(outputy);
-    var br = document.createElement("br");
-    outputwrap.appendChild(br);
-}
-
-function outputErr (data) {
-    document.getElementById("runButton").innerHTML = "Error";
-    var outputy = document.createElement("p");
-    outputy.className = "errText";
-    outputy.innerHTML = String(data);
-
-    //Add new line to terminal
-    outputwrap.appendChild(outputy);
-    var br = document.createElement("br");
-    outputwrap.appendChild(br);
-    setTimeout(function(){document.getElementById("runButton").innerHTML = "Run Code"}, 2000)
-}
-
-//Sort out errors:
-if (typeof console != "undefined") {
-    if (typeof console.error != "undefined") {
-        console.alterror = console.error;
-    } else {
-        console.alterror = function () {}
-    }
-}
-console.error = function (message) {
-    console.alterror(message);
-    outputErr(message);
-}
 
 document.getElementById("runButton").addEventListener("click", function (){
     var pythonRun = new pypyjs({
