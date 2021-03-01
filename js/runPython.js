@@ -32,7 +32,7 @@ pypyjs.ready().then( function () {
 });
 
 //Initiate jqconsole in #inputbox
-var term = $("#inputbox").jqconsole("Launched jq-console", ">>>", "...");
+var term = $("#inputbox").jqconsole("Launched jq-console\n", ">>>", "...");
 term.SetIndentWidth(4);
 
 //RegisterMatching Pairs Below:
