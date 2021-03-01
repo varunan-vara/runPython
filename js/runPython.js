@@ -1,4 +1,5 @@
 //Variables
+document.getElementById("IDE").spellcheck = "false";
 document.getElementById("runButton").style.cursor = "not-allowed";
 pypyjs.ready().then( function () {
     console.log("Pypy.js ready for use.");
@@ -57,25 +58,38 @@ function outputErr (data) {
     setTimeout(function(){document.getElementById("runButton").innerHTML = "Run Code"}, 2000)
 }
 
-function runCode() {
-    document.getElementById("runButton").innerHTML = "Running...";
-    setTimeout(function(){document.getElementById("runButton").innerHTML = "Run Code"}, 2000)
+//Sort out errors:
+if (typeof console != "undefined") {
+    if (typeof console.error != "undefined") {
+        console.alterror = console.error;
+    } else {
+        console.alterror = function () {}
+    }
+}
+console.error = function (message) {
+    console.alterror(message);
+    outputErr(message);
 }
 
 document.getElementById("runButton").addEventListener("click", function (){
     var pythonRun = new pypyjs({
         stdout: function (data) {
             outputLine(data);
+            document.getElementById("runButton").innerHTML = "Run Code";
         },
         stdin: function () {
             runCode();
         },
         stderr: function (data) {
             outputErr(data);
+            document.getElementById("runButton").innerHTML = "Run Code";
         },
     });
     pythonRun.ready().then(function(){
-        var inputy = document.getElementById("IDE").value;
-        return pythonRun.exec(inputy);
+        document.getElementById("runButton").innerHTML = "Running...";
+        setTimeout(function(){
+            var inputy = document.getElementById("IDE").value;
+            return pythonRun.exec(inputy);
+        }, 500)
     });
 });
