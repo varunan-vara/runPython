@@ -31,12 +31,8 @@ pypyjs.ready().then( function () {
     }, 1000)
 });
 
-/*
-.runButton:hover {
-    cursor: no-drop;
-}
-
-^^Implement, with runbutton turning to pointer when loaded
-*/
-
-
+var pythonRun = new pypyjs({
+    stdout: function (data) {
+        
+    },
+});
