@@ -40,9 +40,3 @@ pypyjs.ready().then( function () {
 */
 
 
-var val = document.getElementById("IDE").value;
-console.log("current IDE value: " + val);
-document.getElementById("IDE").addEventListener("click", function() {
-    console.log("Reading the following" + val);
-    pypyjs.exec(val);
-  }); 
