@@ -14,26 +14,23 @@
         <script src="https://pypyjs.org/pypyjs-release/lib/FunctionPromise.js"></script>
         <script src="https://pypyjs.org/pypyjs-release/lib/pypyjs.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/jqconsole.js" type="text/javascript" lang="javascript"></script>
     </head>
     <body>
         <div class="bodyclass">
             <div id="inputbox" class="boxy">
-                <textarea id="IDE" name="ide" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" disabled>import sys
-
-print("Hello World!")
-print(sys.version)
-                </textarea>
+                <!--<textarea id="IDE" name="ide" disabled># This is some Python Code</textarea>-->
             </div>
             <div id="terminalbox" class="boxy"></div>
         </div>
-        <button class="runButton" id="runButton" type="button">Loading...</button>
+        <button class="runButton" id="runButton" type="button">Run Code</button>
         <div class="footer">
             <h5 class="MadyBy">Python Interpreter</h5>
             <br>    
             <h6 class="h6button"><a class="h6button-a" href="https://github.com/varunan-vara/runPython">Source Code</a></h6>
-            <h6 class="h6button"><a class="h6button-a" href="pythonconsole.html">Python Console</a></h6>
+            <h6 class="h6button"><a class="h6button-a" href="index.html">IDE Style Inputs</a></h6>
             <h6 class="h6button" id="infoplacer">pypy.js has not loaded</h6>
         </div>
-        <script src="js/runPython.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/runjqPython.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>
