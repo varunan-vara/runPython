@@ -12,9 +12,10 @@ Imports from fonts.google.com
     --terminal-background: #161616;
     --ide-mainscript: #F8F9FA;
     --ide-specialscript-1: #9ADCE4;
-    --ide-specialscript-2: #ED6A5A;
+    --ide-specialscript-2: #DF7373;
     --ide-specialscript-3: #F4F1BB;
-    --transition-speed: 400ms;
+    --ide-specialscript-4: #AADFEE;
+    --ide-specialscript-5: #A5EAB1;
 }
 
 body {
@@ -174,4 +175,21 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1vw;
     margin-top: 2vh;
     font-family: 'Inconsolata', monospace;
+}
+
+/*Register Matching CSS Colours:*/
+.brackets {
+    color: var(--ide-specialscript-3);
+}
+
+.parantheses {
+    color: var(--ide-specialscript-4);
+}
+
+.square-brackets {
+    color: var(--ide-specialscript-2);
+}
+
+.string {
+    color: var(--ide-specialscript-1);
 }
