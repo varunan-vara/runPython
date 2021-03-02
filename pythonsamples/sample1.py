@@ -8,7 +8,7 @@ class Person:
         self.name = name
         self.age = age
     def printStatus(self):
-        print("Hi, I am {}, aged {}".format(name, age))
+        print("Hi, I am {}, aged {}".format(self.name, self.age))
 
 george = Person("George", 24)
 george.printStatus()
