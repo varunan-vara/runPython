@@ -28,6 +28,7 @@ pypyjs.ready().then( function () {
             terminalOutput(result);
          })
          terminalOutput("<== Use this side for inputs and outputs.");
+         terminalOutput("Not functioning as of yet...");
          document.getElementById("runButton").style.cursor = "pointer";
     }, 1000)
 });

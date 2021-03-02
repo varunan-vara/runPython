@@ -38,14 +38,15 @@ div {
 }
 
 .boxy {
-    min-height: 90vh;
+    height: 90vh;
     min-width: 50vw;
     display: inline-block;
+    overflow: auto;
 }
 
 textarea {
     padding: 2vw;
-    width: 30vw;
+    width: 48vw;
     height: 80vh;
     background-color: var(--ide-background);
     color: var(--ide-mainscript);
@@ -106,6 +107,19 @@ h1, h2, h3, h4, h5, h6 {
     left: 0vw;
 }
 
+
+textarea::-webkit-scrollbar {
+    width: 0.25rem;
+}
+  
+textarea::-webkit-scrollbar-track {
+    background: var(--ide-mainscript);
+}
+  
+textarea::-webkit-scrollbar-thumb {
+    background: var(--terminal-background);
+}
+
 #terminalbox {
     background-color: var(--terminal-background);
     width: 40vw;
@@ -113,6 +127,19 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     position: absolute;
     right: 0vw;
+}
+
+
+div::-webkit-scrollbar {
+    width: 0.25rem;
+}
+  
+div::-webkit-scrollbar-track {
+    background: var(--terminal-background);
+}
+  
+div::-webkit-scrollbar-thumb {
+    background: var(--ide-mainscript);
 }
 
 @-webkit-keyframes slideright {
